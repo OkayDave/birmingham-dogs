@@ -1,0 +1,13 @@
+.row
+  .col-md-12
+    %h1=@shelter.name
+    %p
+      =link_to "&#8592; Back to Shelters".html_safe, shelters_url
+    %hr
+
+.row
+  .col-md-6
+    .shelter-image
+      &nbsp;
+  .col-md-6
+    %p=@shelter.description

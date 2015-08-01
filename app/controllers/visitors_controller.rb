@@ -2,6 +2,6 @@ class VisitorsController < ApplicationController
 
 
   def index
-    @shelters = Shelter.all.sort{|a,b| a.name <=> b.name}
+    @shelters = Shelter.all
   end
 end

@@ -1,0 +1,13 @@
+.row
+  .col-md-12
+    %h1 Birmingham Dog Shelters
+    %hr
+
+.row
+  .col-md-12
+    %ul.shelter-list
+      -@shelters.each do |shelter|
+        %li
+          %p
+            %a{href: shelter_url(shelter)}
+              =shelter.name 
