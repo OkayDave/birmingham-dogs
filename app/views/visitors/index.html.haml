@@ -1,0 +1,11 @@
+.row
+  .col-md-12
+    %h1 Adopt a Dog in Birmingham, UK
+    %hr
+    %p Adopt a Dog is a free service for finding rescue dogs available for re-homing in Birmingham.
+    %p Dogs listed on this site are found from the following dog shelters from around Birmingham:
+
+    %ul
+      -@shelters.each do |shelter|
+        %li
+          =shelter.name
