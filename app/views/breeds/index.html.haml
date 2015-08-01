@@ -1,0 +1,12 @@
+.row
+  .col-md-12
+    %h1 Breeds
+    %hr
+
+.row
+  .col-md-12
+    %ul.breed-list
+      -@breeds.each do |breed|
+        %li
+          %a{href: breed_url(breed)}
+            %p=breed.name

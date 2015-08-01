@@ -1,0 +1,16 @@
+.row
+  .col-md-12
+    %h1=@breed.name
+    %p
+      =link_to "&#8592; Back to Breeds".html_safe, breeds_url
+    %hr
+
+.row
+  .col-md-12
+    %ul.dog-list
+      -@breed.dogs.each do |dog|
+        %li
+          %a{href: dog_url(dog)}
+            %img{src: dog.image_url}
+            %br
+            %p=dog.name

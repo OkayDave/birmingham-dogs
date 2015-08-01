@@ -27,3 +27,8 @@
         %p
           %strong Breed:
           =link_to @dog.breed.name, breed_url(@dog.breed)
+
+      %li
+        %p
+          %strong Shelter:
+          =link_to @dog.shelter.name, shelter_url(@dog.shelter)
