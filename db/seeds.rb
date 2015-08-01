@@ -37,6 +37,7 @@ Dog.create({name:  "Max",
             shelter: bdh,
             is_female: false,
             description: "Max is a very friendly dog",
+            image_url: "http://placecreature.com/dog/520/355",
             date_of_birth: Date.new(2007, 6, 29)})
 
 Dog.create({name:  "Sadie",
@@ -44,6 +45,7 @@ Dog.create({name:  "Sadie",
             shelter: bdh,
             is_female: true,
             description: "Sadie is a very friendly dog",
+            image_url: "http://placecreature.com/puppy/540/355",
             date_of_birth: Date.new(2003, 8, 9)})
 
 Dog.create({name:  "Lucy",
@@ -51,6 +53,7 @@ Dog.create({name:  "Lucy",
             shelter: aa,
             is_female: true,
             description: "Lucy is a very friendly dog",
+            image_url: "http://placecreature.com/puppy/570/355",
             date_of_birth: Date.new(2012, 2, 7)})
 
 Dog.create({name:  "George",
@@ -58,6 +61,7 @@ Dog.create({name:  "George",
             shelter: aa,
             is_female: false,
             description: "George is a very friendly dog",
+            image_url: "http://placecreature.com/dog/530/355",
             date_of_birth: Date.new(2013, 12, 14)})
 
 

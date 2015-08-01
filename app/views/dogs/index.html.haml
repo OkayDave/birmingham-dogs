@@ -1,0 +1,14 @@
+.row
+  .col-md-12
+    %h1 Find a Dog
+    %hr
+
+.row
+  .col-md-12
+    %ul.dog-list
+      -@dogs.each do |dog|
+        %li
+          %a{href: dog_url(dog)}
+            %img{src: dog.image_url}
+            %br
+            %p=dog.name
