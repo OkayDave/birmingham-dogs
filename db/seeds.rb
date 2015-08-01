@@ -21,7 +21,6 @@ aa = Shelter.create   name: "Animal Allsorts",
                       description: "Animal Allsorts is a small charity in Birmingham, UK that adopts / rehomes unwanted, abandoned or mistreated animals around the West Midlands area. The charity is run entirely by unpaid volunteersusing a network of dedicated foster carers, we do not use kennels",
                       url: "http://www.animalallsorts.org.uk/"
 
-puts aa.inspect
 
 
 # Breeds
