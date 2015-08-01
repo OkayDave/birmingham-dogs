@@ -1,0 +1,29 @@
+.row
+  .col-md-12
+    %h1=@dog.name
+    %p
+      =link_to "&#8592; Back to Dogs".html_safe, dogs_url 
+    %hr
+
+.row
+  .col-md-6
+    .dog-image
+      =image_tag @dog.image_url
+  .col-md-6
+    %p=@dog.description
+    %hr
+    %ul
+      %li
+        %p
+          %strong Date of Birth:
+          #{@dog.date_of_birth} (#{time_ago_in_words(@dog.date_of_birth)})
+
+      %li
+        %p
+          %strong Gender:
+          =@dog.is_female ? "Female" : "Male"
+
+      %li
+        %p
+          %strong Breed:
+          =link_to @dog.breed.name, breed_url(@dog.breed)
