@@ -10,7 +10,7 @@
     .dog-image
       =image_tag @dog.image_url
   .col-md-6
-    %p=@dog.description
+    %p=simple_format @dog.description
     %hr
     %ul
       -if @dog.age_string || @dog.date_of_birth
