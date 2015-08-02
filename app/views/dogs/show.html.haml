@@ -13,22 +13,30 @@
     %p=@dog.description
     %hr
     %ul
-      %li
-        %p
-          %strong Date of Birth:
-          #{@dog.date_of_birth} (#{time_ago_in_words(@dog.date_of_birth)})
+      -if @dog.age_string || @dog.date_of_birth
+        %li
+          %p
+            -if @dog.date_of_birth
+              %strong Date of Birth:
+              #{@dog.date_of_birth} (#{time_ago_in_words(@dog.date_of_birth)})
+            -else
+              %strong Approximate Age:
+            =@dog.age_string
 
-      %li
-        %p
-          %strong Gender:
-          =@dog.is_female ? "Female" : "Male"
+      -if @dog.is_female
+        %li
+          %p
+            %strong Gender:
+            =@dog.is_female ? "Female" : "Male"
 
-      %li
-        %p
-          %strong Breed:
-          =link_to @dog.breed.name, breed_url(@dog.breed)
+      -if @dog.breed
+        %li
+          %p
+            %strong Breed:
+            =link_to @dog.breed.name, breed_url(@dog.breed)
 
-      %li
-        %p
-          %strong Shelter:
-          =link_to @dog.shelter.name, shelter_url(@dog.shelter)
+      -if @dog.shelter
+        %li
+          %p
+            %strong Shelter:
+            =link_to @dog.shelter.name, shelter_url(@dog.shelter)
