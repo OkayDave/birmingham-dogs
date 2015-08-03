@@ -5,9 +5,18 @@
 
 .row
   .col-md-12
-    %ul.shelter-list
-      -@shelters.each do |shelter|
-        %li
-          %p
-            %a{href: shelter_url(shelter)}
-              =shelter.name 
+    -@shelters.each do |shelter|
+      .row
+          
+        .col-md-8
+          %h2=link_to shelter.name, shelter_url(shelter)
+          %br
+          =simple_format shelter.description
+          %br
+          %p=link_to "Details", shelter_url(shelter), class: "btn btn-primary"
+        .col-md-4
+          -if shelter.image_url
+            =image_tag shelter.image_url, alt: shelter.name
+          -else
+            &nbsp;
+

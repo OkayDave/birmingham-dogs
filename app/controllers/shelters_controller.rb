@@ -7,5 +7,6 @@ class SheltersController < ApplicationController
 
   def show
     @shelter = Shelter.find(params[:id])
+    @dogs = @shelter.dogs.limit(3)
   end
 end

@@ -5,8 +5,11 @@
 
 .row
   .col-md-12
-    %ul.breed-list
+    .dog-list
       -@breeds.each do |breed|
-        %li
-          %a{href: breed_url(breed)}
-            %p=breed.name
+        .col-md-4
+          .dog-list-item{style: "background-image: url('#{breed.dog_image_url}');"}
+            %a{href: breed_url(breed)}
+              %p.caption=breed.name
+
+
