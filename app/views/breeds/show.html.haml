@@ -7,10 +7,4 @@
 
 .row
   .col-md-12
-    %ul.dog-list
-      -@breed.dogs.each do |dog|
-        %li
-          %a{href: dog_url(dog)}
-            %img{src: dog.image_url}
-            %br
-            %p=dog.name
+    =render partial: "dogs/dog_list", locals: {dogs: @dogs}

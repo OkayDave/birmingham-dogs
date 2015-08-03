@@ -1,0 +1,6 @@
+.dog-list
+  -dogs.each do |dog|
+    .col-md-4
+      .dog-list-item{style: "background-image: url('#{dog.image_url}');"}
+        %a{href: dog_url(dog)}
+          %p.caption=dog.name
