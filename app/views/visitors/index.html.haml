@@ -8,4 +8,5 @@
     %ul
       -@shelters.each do |shelter|
         %li
-          =shelter.name
+          =link_to shelter.name, shelter_url(shelter)
+
