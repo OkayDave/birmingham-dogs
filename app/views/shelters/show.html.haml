@@ -6,8 +6,19 @@
     %hr
 
 .row
-  .col-md-6
-    .shelter-image
-      &nbsp;
-  .col-md-6
-    %p=@shelter.description
+  .col-md-4
+    -if @shelter.image_url
+      .shelter-image
+        =image_tag @shelter.image_url, alt: @shelter.name
+  .col-md-8
+    %h3 About #{@shelter.name}
+    %br
+    =simple_format @shelter.description
+    %br
+
+.row
+
+  .col-md-12
+    %h3 Dogs at #{@shelter.name}
+    %hr
+    =render partial: "dogs/dog_list", locals: {dogs: @shelter.dogs}
