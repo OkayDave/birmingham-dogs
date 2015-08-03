@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803001841) do
+ActiveRecord::Schema.define(version: 20150803033910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20150803001841) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image_url"
+    t.string   "slug"
   end
+
+  add_index "breeds", ["slug"], name: "index_breeds_on_slug", using: :btree
 
   create_table "dogs", force: :cascade do |t|
     t.integer  "shelter_id",                    null: false
@@ -41,11 +44,13 @@ ActiveRecord::Schema.define(version: 20150803001841) do
     t.string   "status"
     t.date     "date_added"
     t.string   "shelter_url"
+    t.string   "slug"
   end
 
   add_index "dogs", ["breed_id"], name: "index_dogs_on_breed_id", using: :btree
   add_index "dogs", ["is_female"], name: "index_dogs_on_is_female", using: :btree
   add_index "dogs", ["shelter_id"], name: "index_dogs_on_shelter_id", using: :btree
+  add_index "dogs", ["slug"], name: "index_dogs_on_slug", using: :btree
 
   create_table "shelters", force: :cascade do |t|
     t.string   "name",            null: false
@@ -55,6 +60,9 @@ ActiveRecord::Schema.define(version: 20150803001841) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "image_url"
+    t.string   "slug"
   end
+
+  add_index "shelters", ["slug"], name: "index_shelters_on_slug", using: :btree
 
 end

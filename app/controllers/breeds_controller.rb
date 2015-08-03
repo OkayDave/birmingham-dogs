@@ -5,6 +5,7 @@ class BreedsController < ApplicationController
   end
 
   def show
-    @breed = Breed.includes(:dogs).find(params[:id])
+    @breed = Breed.find(params[:id])
+    @dogs = @breed.dogs
   end
 end
