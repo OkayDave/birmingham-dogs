@@ -2,13 +2,15 @@ module Sluggable
   extend ActiveSupport::Concern
 
   included do
-    before_save :_generate_slug
+    after_create :_generate_slug
   end
 
   def _generate_slug
     if self.slug.blank?
-      self.slug = "#{self.name} #{self.id}" .gsub(" ","-").gsub(".","")
+      self.slug = "#{self.name} #{self.id unless self.is_a?(Shelter)}" .gsub(" ","-").gsub(".","")
+      self.save
     end
+
   end
 
   def to_param

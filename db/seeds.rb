@@ -38,7 +38,7 @@ Sunnyside houses 100 strays in state-of-the-art accommodation complete with vete
                   image_url: "http://www.animalallsorts.org.uk/images/AnimalAllsortsLogo.jpg",
                   contact_details: "http://www.animalallsorts.org.uk/"
 
-  Shelter.create  name: "Wythall Animal Sanctuary"
+  Shelter.create  name: "Wythall Animal Sanctuary",
                   description: "Wythall Animal Sanctuary was founded by Mr. & Mrs. E. Davies in 1968, whose aim was to save and find homes for as many unwanted pets as possible. Many thousands have been found new homes since then. Many of these animals may otherwise have been destroyed.
 
                   We have a non-destruction policy and we are the last hope for these animals. As our name signifies we give them true Sanctuary.

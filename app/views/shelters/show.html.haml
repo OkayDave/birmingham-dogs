@@ -15,6 +15,10 @@
     %br
     =simple_format @shelter.description
     %br
+    %p
+      =link_to "View Shelter's Website", @shelter.url, class: "btn btn-primary btn-large", target: "_blank"
+      =link_to "View Contact Details", @shelter.contact_details, class: "btn  btn-large", target: "_blank"
+
 
 .row
 
