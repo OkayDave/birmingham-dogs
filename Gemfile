@@ -16,7 +16,7 @@ gem 'activeadmin', :github=>"gregbell/active_admin"
 gem 'bootstrap-sass'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'haml-rails'
-gem 'pg'
+
 gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
@@ -41,6 +41,7 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
+  gem 'pg'
 end
 group :development, :test do
   gem 'factory_girl_rails'
