@@ -1,48 +1,20 @@
-Dogs
+Birmingham Dogs
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+This is a Ruby on Rails app which attempts to list all of the rescue dogs currently seeking their forever homes in Birmingham, UK.
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+This is currently hosted at [dogs.saucyofharborne.co.uk](http://dogs.saucyofharborne.co.uk)
 
-Problems? Issues?
------------
+@OkayDave (Dave Russell) is currently looking for work. Should you know of anyone looking for a remote Rails developer, [please send them his way.](https://www.linkedin.com/profile/view?id=35703739)
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
--------------
-
-This application requires:
-
-- Ruby 2.1.2
-- Rails 4.2.3
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
 
 Issues
 -------------
 
-Similar Projects
-----------------
+Please post any issues on the Github issue tracker. Pull requests welcome :)
 
-Contributing
-------------
-
-Credits
--------
 
 License
 -------
+
+Licensed under MIT. Please check individual dependencies for their licences.
