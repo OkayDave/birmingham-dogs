@@ -21,7 +21,7 @@ module Sluggable
   module ClassMethods
     def find(id)
       puts id.class
-      if !id.respond_to?(:is_numeric?) || id.is_numeric?
+      if id.is_numeric?
         super(id)
       else
         find_by_slug(id)

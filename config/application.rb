@@ -59,4 +59,4 @@ end
 
 
 require "ext/string"
-
+require "ext/fixnum"
