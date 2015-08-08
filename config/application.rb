@@ -46,6 +46,14 @@ module Dogs
 
     config.autoload_paths << "#{Rails.root}/app/scrapers"
     config.autoload_paths << "#{Rails.root}/lib"
+
+
+    config.middleware.use Rack::Cors do
+      allow do 
+        origins "*"
+        resource "*", headers: :any, methods: [:get]
+      end
+    end
   end
 end
 
