@@ -15,9 +15,8 @@ class DogSerializer < ActiveModel::Serializer
               :shelter_url,
               :slug
 
-  belongs_to :breed
-  belongs_to :shelter
+  has_one :breed
+  has_one :shelter
 
-  url :dog
 
 end
