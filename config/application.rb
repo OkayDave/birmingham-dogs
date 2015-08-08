@@ -48,10 +48,10 @@ module Dogs
     config.autoload_paths << "#{Rails.root}/lib"
 
 
-    config.middleware.use Rack::Cors do
+    config.middleware.insert_before 0, "Rack::Cors" do
       allow do 
         origins "*"
-        resource "*", headers: :any, methods: [:get]
+        resource "*", headers: :any, methods: [:get, :post, :update, :delete, :options]
       end
     end
   end
