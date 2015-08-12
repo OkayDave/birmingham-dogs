@@ -2,7 +2,7 @@ require 'faker'
 
 FactoryGirl.define do
   factory :shelter do
-    name            { Faker::Company.name  }
+    name            { Faker::Name.last_name  }
     description     { Faker::Lorem.sentence }
     slug            { Faker::Internet.slug }
     url             { Faker::Internet.url }

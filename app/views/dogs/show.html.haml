@@ -10,7 +10,8 @@
     .dog-image
       =image_tag @dog.image_url
   .col-md-6
-    %p=simple_format @dog.description
+    %br
+    .dog-description=simple_format @dog.description
     %br
     %p
       =link_to "View Full Details", @dog.shelter_url, target: "_blank", class: "btn btn-primary btn-large"
