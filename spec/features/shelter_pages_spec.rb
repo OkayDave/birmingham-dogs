@@ -2,7 +2,6 @@
 feature 'Shelter pages' do
 
   before(:all) do
-    puts "before"
     @shelters = []
     2.times do
       shelter = FactoryGirl.create(:shelter)

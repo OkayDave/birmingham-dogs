@@ -3,9 +3,8 @@
 feature 'Dog pages' do
 
   before do 
-    Dog.all.each(&:destroy)
     @dogs = []
-    5.times do 
+    2.times do 
       @dogs << FactoryGirl.create(:dog)
     end
   end
@@ -51,16 +50,16 @@ feature 'Dog pages' do
 
 
     it "has a link back to index" do 
-      expect(page).to have_link("← Back to Dogs", href: dogs_url)
+      expect(find('p.dogs-index-link a')[:href]).to eq(dogs_url)
+
     end
 
     it "shows the dog's name" do
       expect(page).to have_content(@dog.name)
-      save_and_open_page
     end
 
     it "shows the dog's image" do
-      expect(page).to have_css("img[src$='#{@dog.image_url}']")
+      expect(find(".dog-image img")['src']).to eq(@dog.image_url)
     end
 
     it "shows the dog's description" do
@@ -68,7 +67,7 @@ feature 'Dog pages' do
     end
 
     it "has link to shelter website" do
-      expect(page).to have_link("View Full Details", @dog.shelter_url)
+      expect(page).to have_link("View Full Details", href: @dog.shelter_url)
     end
 
     it "links to breed show page" do
