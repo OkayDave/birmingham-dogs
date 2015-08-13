@@ -45,6 +45,37 @@ feature 'breed pages' do
 
     end
   end
+
+
+  context "when visiting breed show page" do
+    before do
+      @breed = @breeds.first
+      visit breed_url(@breed)
+    end
+
+    it "shows the right page" do
+      expect(page).to have_content @breed.name
+    end
+
+    it "lists the breed's dogs" do
+      @breed.dogs.each do |dog|
+        expect(page).to have_content(dog.name)
+      end
+    end 
+
+    context "each dog entry" do
+      before { @element = find("div#dog-list-#{@breed.dogs.first.id}") }
+
+      it "shows the dog image" do
+        expect(@element[:style]).to include(@breed.dogs.first.image_url)
+      end
+
+      it "links to dog page" do
+        expect(page).to have_link @breed.dogs.first.name
+      end
+    end
+
+  end
   
 
 
