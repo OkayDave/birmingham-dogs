@@ -2,9 +2,8 @@ require 'faker'
 
 FactoryGirl.define do
   factory :breed do
-    name      { Faker::Name.last_name }
-    slug      { Faker::Internet.slug  }
-    image_url { Faker::Internet.url   }
+    name      { Faker::Name.last_name.gsub(".","") }
+    image_url { Faker::Company.logo   }
 
     
   end

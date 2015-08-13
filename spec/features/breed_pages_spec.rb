@@ -8,11 +8,16 @@ feature 'breed pages' do
       breed = FactoryGirl.create :breed
       FactoryGirl.create(:dog, breed: breed)
       @breeds << breed
+
+      
+      
     end
+
+    @breed = @breeds.first
   end
 
   context "when visiting breed index page" do
-    before { visit breeds_url }
+    before(:context) { visit breeds_url }
 
 
     it "shows the right page" do
@@ -26,9 +31,8 @@ feature 'breed pages' do
     end
 
     context "each breed entry" do
-      before do 
-        @breed = @breeds.first
-        @element = find("div#breed-#{@breed.id}")
+      before(:context) do
+        @element = find("div#breed-#{@breed.id}")    
       end
 
       it "shows the breed name" do

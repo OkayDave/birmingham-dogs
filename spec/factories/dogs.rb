@@ -2,13 +2,12 @@ require 'faker'
 
 FactoryGirl.define do
   factory :dog do
-    name    { Faker::Name.last_name }
+    name    { Faker::Name.last_name.gsub(".","") }
     is_female true
     description { Faker::Lorem.sentence }
     age_string { Faker::Lorem.sentence }
-    image_url { Faker::Internet.url }
+    image_url { Faker::Company.logo }
     shelter_url { Faker::Internet.url }
-    slug { Faker::Internet.slug }
     
     shelter
     breed

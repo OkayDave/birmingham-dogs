@@ -44,7 +44,7 @@ feature 'Shelter pages' do
   end
 
   context "when visiting shelter show page" do
-    before do
+    before(:all) do
       @shelter = @shelters.first
       visit shelter_url(@shelter)
       
@@ -52,6 +52,7 @@ feature 'Shelter pages' do
 
     it "shows the shelter name" do
       expect(page).to have_content("About #{@shelter.name}")
+      save_and_open_page
     end
 
     it "shows the shelter description" do

@@ -7,7 +7,7 @@ module Sluggable
 
   def _generate_slug
     if self.slug.blank?
-      self.slug = "#{self.name} #{self.id unless self.is_a?(Shelter)}" .gsub(" ","-").gsub(".","")
+      self.slug = "#{self.name} #{self.id unless self.is_a?(Shelter)}".parameterize
       self.save
     end
 
