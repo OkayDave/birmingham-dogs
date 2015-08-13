@@ -8,7 +8,7 @@
     .dog-list
       -@breeds.each do |breed|
         .col-md-4
-          .dog-list-item{style: "background-image: url('#{breed.dog_image_url}');"}
+          .dog-list-item{id: "breed-#{breed.id}", style: "background-image: url('#{breed.dog_image_url}');"}
             %a{href: breed_url(breed)}
               %p.caption=breed.name
 
