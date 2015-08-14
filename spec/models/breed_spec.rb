@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Breed, type: :model do
+  it_behaves_like "sluggable"
+
   before do
     @breed = FactoryGirl.create :breed
   end
