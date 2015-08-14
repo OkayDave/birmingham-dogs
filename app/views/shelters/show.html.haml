@@ -13,7 +13,8 @@
   .col-md-8
     %h3 About #{@shelter.name}
     %br
-    =simple_format @shelter.description
+    .shelter-description
+      =simple_format @shelter.description
     %br
     %p
       =link_to "View Shelter's Website", @shelter.url, class: "btn btn-primary btn-large", target: "_blank"
