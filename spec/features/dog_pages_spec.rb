@@ -11,7 +11,7 @@ feature 'Dog pages' do
 
 
   context 'visiting dogs index' do
-    before(:all) do
+    before do
       visit dogs_path
     end
     
@@ -43,7 +43,7 @@ feature 'Dog pages' do
 
   context 'visiting dogs show' do
     
-    before(:all) do
+    before do
       @dog = @dogs.first
       visit dog_path(@dog)
     end

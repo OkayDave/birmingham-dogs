@@ -17,7 +17,7 @@ feature 'breed pages' do
   end
 
   context "when visiting breed index page" do
-    before(:context) { visit breeds_url }
+    before { visit breeds_url }
 
 
     it "shows the right page" do
@@ -31,7 +31,7 @@ feature 'breed pages' do
     end
 
     context "each breed entry" do
-      before(:context) do
+      before do
         @element = find("div#breed-#{@breed.id}")    
       end
 
