@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/OkayDave/birmingham-dogs/tree/master.svg?style=svg&circle-token=a72949738a15fa663602643a061a7f3b500c0492)](https://circleci.com/gh/OkayDave/birmingham-dogs/tree/master)
+
 Birmingham Dogs
 ================
 
