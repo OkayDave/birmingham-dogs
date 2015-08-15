@@ -2,10 +2,10 @@ module Sluggable
   extend ActiveSupport::Concern
 
   included do
-    after_create :_generate_slug
+    after_create :generate_slug
   end
 
-  def _generate_slug
+  def generate_slug
     if self.slug.blank?
       self.slug = "#{self.name} #{self.id unless self.is_a?(Shelter)}".parameterize
       self.save
@@ -20,11 +20,15 @@ module Sluggable
 
   module ClassMethods
     def find(id)
-      puts id.class
       if id.is_numeric?
         super(id)
       else
-        find_by_slug(id)
+        found = find_by_slug(id)
+        if found.nil?
+          raise ActiveRecord::RecordNotFound
+        else
+          return found
+        end
       end
     end
   end
