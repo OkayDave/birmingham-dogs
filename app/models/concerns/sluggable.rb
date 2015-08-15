@@ -20,11 +20,15 @@ module Sluggable
 
   module ClassMethods
     def find(id)
-      puts id.class
       if id.is_numeric?
         super(id)
       else
-        find_by_slug(id)
+        found = find_by_slug(id)
+        if found.nil?
+          raise ActiveRecord::RecordNotFound
+        else
+          return found
+        end
       end
     end
   end
